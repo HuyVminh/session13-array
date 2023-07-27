@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = String(prompt("Nhập 1 chuỗi bất kỳ"));
+        const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const low = "abcdefghijklmnopqrstuvwxyz";
+        let arr = [];
+        for (i = 0; i < str.length; i++) {
+            // dau cach thi them vao luon
+            if (str[i] == " ") {
+                arr.push(" ");
+                continue;
+            }
+            for (let j = 0; j < up.length; j++) {
+                if (str[i] == up[j]) {
+                    arr.push(low[j]);
+                } else if (str[i] == low[j]) {
+                    arr.push(up[j]);
+                }
+            }
+        }
+        console.log(arr.join(""));
+    </script>
+</body>
+
+</html>

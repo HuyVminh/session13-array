@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //nhập C/R/U/D
+        let arr = ["rửa rau", "giặt đồ"];
+        let str = prompt("Nhập việc bạn cần thực hiện (C/R/U/D) và 0 để kết thúc");
+        while (true) {
+            if (str == "C") {
+                c = prompt("Hãy nhập công việc bạn muốn thực hiện");
+                arr.push(c);
+            } else if (str == "R") {
+                console.log(arr);
+            } else if (str == "U") {
+                let vitri;
+                do {
+                    vitri = +prompt(`Nhập vị trí bạn muốn sửa (0-${arr.length - 1})`);
+                } while (vitri < 0 || vitri >= arr.length);
+                let sua = prompt("Nhập công việc bạn muốn sửa thành");
+                arr[vitri] = sua;
+                console.log(arr);
+            } else if (str == "D"){
+                let vitri;
+                do {
+                    vitri = +prompt(`Nhập vị trí bạn muốn xóa (0-${arr.length - 1})`);
+                } while (vitri < 0 || vitri >= arr.length);
+                arr.splice(vitri,1);
+                console.log(arr);
+            }else if(str=="0"){
+                break;
+            }else{ }
+                str = prompt("Nhập việc bạn cần thực hiện (C/R/U/D) và 0 để kết thúc");
+        }
+    </script>
+</body>
+
+</html>

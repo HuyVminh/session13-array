@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Viết một chương trình nhận một số nhập vào và chèn dấu(_) giữa 2 số chẵn.
+        let string = String(prompt("Nhập vào 1 chuỗi số"));
+        let arr = [];
+        for (i = 0; i < string.length; i++) {
+            arr.push(string.charAt(i))
+            if (string.charAt(i) % 2 == 0 && string.charAt(i + 1) % 2 == 0 && i != string.length-1) {
+                arr.push("-");
+            }
+        }
+        console.log(arr.join(""));
+    </script>
+</body>
+
+</html>
